@@ -82,3 +82,43 @@ $theme: mat-light-theme($primary, $accent);
 
 // Include all theme styles for the components.
 @include angular-material-theme($theme);
+
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  &__title {
+    margin: 1.5rem auto !important;
+    text-align: center;
+    font-size: 3rem !important;
+  }
+}
+
+button {
+  margin: 1.5rem 0 !important;
+}
+
+form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ctas-box {
+  button {
+    &:not(:last-child) {
+      margin-right: 1rem !important;
+    }
+  }
+}
