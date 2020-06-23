@@ -1,1 +1,46 @@
-<section class="content-container"><h1>Add Product</h1></section>
+<section class="content-container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="form">
+    <mat-form-field>
+      <input
+        type="text"
+        placeholder="Product Title"
+        matInput
+        formControlName="title"
+      />
+      <mat-error *ngIf="productForm.controls['title'].hasError('required')"
+        >Product Title is required</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        placeholder="Product Price"
+        matInput
+        formControlName="price"
+      />
+      <mat-error *ngIf="productForm.controls['price'].hasError('required')"
+        >Product Price is required</mat-error
+      >
+    </mat-form-field>
+    <div class="ctas-box">
+      <button
+        mat-button
+        class="mat-raised-button mat-primary"
+        color="primary"
+        type="submit"
+        [disabled]="!productForm.valid"
+      >
+        Save
+      </button>
+      <button
+        mat-button
+        class="mat-raised-button mat-accent"
+        color="primary"
+        type="button"
+        (click)="onReset()"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</section>

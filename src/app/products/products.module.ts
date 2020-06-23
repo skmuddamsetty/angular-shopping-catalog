@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { ProductsRoutingModule } from "./products-routing.module";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductsListComponent } from "./product-list/products-list.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { ProductFormComponent } from "./product-form/product-form.component";
@@ -12,12 +12,9 @@ import { ProductsNavbarComponent } from "./products-navbar/products-navbar.compo
 import { ProductsCenterComponent } from "./products-center/products-center.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
-import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { MatListModule } from "@angular/material/list";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from "@angular/platform-browser";
+import { MatInputModule } from "@angular/material/input";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -29,6 +26,16 @@ import { BrowserModule } from "@angular/platform-browser";
     ProductsNavbarComponent,
     ProductsCenterComponent,
   ],
-  imports: [CommonModule, FormsModule, ProductsRoutingModule, MatToolbarModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ProductsRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+  ],
 })
 export class ProductsModule {}
