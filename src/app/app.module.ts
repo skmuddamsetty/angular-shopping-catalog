@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent],
@@ -24,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatListModule,
+    ProductsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
