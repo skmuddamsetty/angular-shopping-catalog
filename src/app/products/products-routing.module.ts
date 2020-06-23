@@ -14,6 +14,7 @@ const routes: Routes = [
       {
         path: "",
         component: ProductsListComponent,
+        pathMatch: "full",
       },
       {
         path: "create",

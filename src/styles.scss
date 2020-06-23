@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
 @import "~@angular/material/theming";
 
 // Include non-theme styles for core.
@@ -37,7 +35,7 @@ $mat-primary: (
     A200: $light-primary-text,
     A400: $light-primary-text,
     A700: $light-primary-text,
-  )
+  ),
 );
 
 $mat-accent: (
@@ -70,19 +68,17 @@ $mat-accent: (
     A200: $light-primary-text,
     A400: $light-primary-text,
     A700: $light-primary-text,
-  )
+  ),
 );
-
 
 // Define a theme.
 $primary: mat-palette($mat-pink);
-$accent:  mat-palette($mat-accent, A200, A100, A400);
+$accent: mat-palette($mat-accent, A200, A100, A400);
 
 $theme: mat-light-theme($primary, $accent);
 
 // Include all theme styles for the components.
 @include angular-material-theme($theme);
-
 
 html,
 body {
@@ -119,6 +115,23 @@ form {
   button {
     &:not(:last-child) {
       margin-right: 1rem !important;
+    }
+  }
+}
+
+mat-toolbar {
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    border-radius: 3px;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &:hover,
+    &.active {
+      background: #ff80ab;
     }
   }
 }
