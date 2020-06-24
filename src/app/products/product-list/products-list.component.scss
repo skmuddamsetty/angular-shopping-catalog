@@ -1,0 +1,14 @@
+.product-card {
+  max-width: 400px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  mat-card {
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    max-width: 20rem;
+  }
+}

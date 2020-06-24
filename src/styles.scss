@@ -92,7 +92,7 @@ body {
 
 .content-container {
   max-width: 80rem;
-  margin: 0 auto;
+  margin: 8rem auto;
   &__title {
     margin: 1.5rem auto !important;
     text-align: center;
@@ -102,6 +102,7 @@ body {
 
 button {
   margin: 1.5rem 0 !important;
+  min-width: 10rem !important;
 }
 
 form {

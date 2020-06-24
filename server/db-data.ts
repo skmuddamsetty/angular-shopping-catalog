@@ -9,6 +9,31 @@ export const PRODUCTS: any = {
     title: "Apple Watch",
     price: 24999,
   },
+  3: {
+    id: 1,
+    title: "MacBook Pro",
+    price: 154900,
+  },
+  4: {
+    id: 2,
+    title: "Apple Watch",
+    price: 24999,
+  },
+  5: {
+    id: 1,
+    title: "MacBook Pro",
+    price: 154900,
+  },
+  6: {
+    id: 2,
+    title: "Apple Watch",
+    price: 24999,
+  },
+  7: {
+    id: 1,
+    title: "MacBook Pro",
+    price: 154900,
+  },
 };
 
 export const COURSES: any = {
