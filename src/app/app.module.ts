@@ -12,6 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatListModule } from "@angular/material/list";
 import { ProductsModule } from "./products/products.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent],
@@ -19,6 +20,7 @@ import { ProductsModule } from "./products/products.module";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ProductsModule,
     MatToolbarModule,
     MatIconModule,
