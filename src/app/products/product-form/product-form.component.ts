@@ -11,6 +11,9 @@ export class ProductFormComponent implements OnInit {
   productForm = this.fb.group({
     title: ["", Validators.required],
     price: ["", Validators.required],
+    description: ["", Validators.required],
+    expressShipping: [""],
+    onSale: [""],
   });
 
   @Output() submitEvent = new EventEmitter<Product>();

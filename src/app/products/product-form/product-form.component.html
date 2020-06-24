@@ -22,6 +22,27 @@
         >Product Price is required</mat-error
       >
     </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        placeholder="Ex. This product is all about..."
+        formControlName="description"
+      ></textarea>
+      <mat-error
+        *ngIf="productForm.controls['description'].hasError('required')"
+        >Product Description is required</mat-error
+      >
+    </mat-form-field>
+    <mat-slide-toggle
+      color="accent"
+      formControlName="expressShipping"
+      class="block"
+      >Express Shipping</mat-slide-toggle
+    >
+    <mat-slide-toggle color="accent" formControlName="onSale"
+      >On Sale</mat-slide-toggle
+    >
     <div class="ctas-box">
       <button
         mat-button
