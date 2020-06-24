@@ -12,8 +12,8 @@ export class ProductFormComponent implements OnInit {
     title: ["", Validators.required],
     price: ["", Validators.required],
     description: ["", Validators.required],
-    expressShipping: [""],
-    onSale: [""],
+    expressShipping: [false],
+    onSale: [false],
   });
 
   @Output() submitEvent = new EventEmitter<Product>();

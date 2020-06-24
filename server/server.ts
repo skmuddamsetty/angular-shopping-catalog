@@ -4,6 +4,7 @@ import {
   getAllCourses,
   getCourseById,
   getAllProducts,
+  createProduct,
 } from "./get-courses.route";
 import { searchLessons } from "./search-lessons.route";
 import { saveCourse } from "./save-course.route";
@@ -26,6 +27,7 @@ app.route("/api/courses/:id").put(saveCourse);
 app.route("/api/login").post(loginUser);
 
 app.route("/api/products").get(getAllProducts);
+app.route("/api/products").post(createProduct);
 
 const httpServer = app.listen(9000, () => {
   console.log(
