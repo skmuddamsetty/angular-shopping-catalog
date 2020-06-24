@@ -13,6 +13,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatListModule } from "@angular/material/list";
 import { ProductsModule } from "./products/products.module";
 import { HttpClientModule } from "@angular/common/http";
+import { MessagesService } from "./messages/messages.service";
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent],
@@ -29,7 +30,7 @@ import { HttpClientModule } from "@angular/common/http";
     MatProgressSpinnerModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

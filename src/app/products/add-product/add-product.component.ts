@@ -17,6 +17,6 @@ export class AddProductComponent implements OnInit {
 
   onSubmit(product: Product) {
     console.log(product);
-    this.productsStore.createProduct(product).subscribe();
+    this.productsStore.createProduct(product).pipe().subscribe();
   }
 }

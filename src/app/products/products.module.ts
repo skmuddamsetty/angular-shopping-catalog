@@ -19,6 +19,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MessagesComponent } from "../messages/messages.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     EditProductComponent,
     ProductsNavbarComponent,
     ProductsCenterComponent,
+    MessagesComponent,
   ],
   imports: [
     CommonModule,

@@ -11,7 +11,10 @@ import { MessagesService } from "../messages/messages.service";
 export class ProductsStoreService {
   private subject = new BehaviorSubject<Product[]>([]);
   products$: Observable<Product[]> = this.subject.asObservable();
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private messagesService: MessagesService
+  ) {
     console.log("inside ProductsStoreService");
     this.loadAllProducts();
   }
@@ -31,10 +34,11 @@ export class ProductsStoreService {
     // optimistic save
     products.push(product);
     this.subject.next(products);
-    return this.http.post("/api/productss", product).pipe(
+    this.messagesService.showErrors("Product added successfully");
+    return this.http.post("/api/products", product).pipe(
       catchError((err) => {
         const msg = "Could not save the product. Please try again.";
-        // this.messagesService.showErrors(msg);
+        this.messagesService.showErrors(msg);
         return throwError(err);
       }),
       shareReplay()
