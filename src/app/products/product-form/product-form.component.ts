@@ -14,6 +14,7 @@ export class ProductFormComponent implements OnInit {
     description: ["", Validators.required],
     expressShipping: [false],
     onSale: [false],
+    imageURL: [],
   });
 
   @Output() submitEvent = new EventEmitter<Product>();
